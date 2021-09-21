@@ -6,7 +6,9 @@ function createGrid(size){
         cell.className='cell';
         grid.appendChild(cell);
     }
-    grid.style.gridTemplateColumns = "repeat(" + Math.sqrt(size) + ", 50px)";
-}
 
+    var scale = 500/(Math.sqrt(size));
+    grid.style.gridTemplateColumns = "repeat(" + Math.sqrt(size) + ", " + scale + "px)";
+    grid.style.gridTemplateRows = "repeat(auto-fill, " + scale + "px)";
+}
 createGrid(100);
