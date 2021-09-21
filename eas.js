@@ -1,4 +1,4 @@
-var grid = document.getElementById('container')
+var grid = document.getElementById("container")
 
 function reset(parent){
     while (parent.firstChild) {
@@ -15,18 +15,19 @@ function createGrid(size){
         grid.appendChild(cell);
     }
 
-    grid.style.gridTemplateColumns = "repeat(" + size + ", " + 500/size + "px)";
-    grid.style.gridTemplateRows = "repeat(auto-fill, " + 500/size + "px)";
+    grid.style.gridTemplateColumns = 'repeat(' + size + ', ' + 500/size + 'px)';
+    grid.style.gridTemplateRows = 'repeat(auto-fill, ' + 500/size + 'px)';
 }
 
 
 grid.addEventListener("mouseover", function(event) {
-event.target.style.backgroundColor = "black";
+event.target.style.backgroundColor = 'black';
 grid.style.backgroundColor = 'white';
 });
 
 var slider = document.getElementById("slider");
 var output = document.getElementById("output");
+output.innerHTML = '16 x 16';
 
 slider.oninput = function() {
     output.innerHTML = this.value + " x " + this.value;
@@ -37,3 +38,11 @@ slider.addEventListener("click", function(){
     createGrid(sliderValue);
 });
 
+var clear = document.getElementById("clear");
+
+clear.addEventListener("click", function(){
+    var sliderValue = slider.value;
+    createGrid(sliderValue);
+});
+
+createGrid(16);
