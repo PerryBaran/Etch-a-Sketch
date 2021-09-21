@@ -3,7 +3,8 @@
    display: grid;
    height: 500px;
    width: 500px;
-   background-color: orange;
+   background-color: black;
+   border: 2px solid black;
 }
 
 .cell {
