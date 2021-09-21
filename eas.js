@@ -22,6 +22,7 @@ function createGrid(size){
 
 grid.addEventListener("mouseover", function(event) {
 event.target.style.backgroundColor = "black";
+grid.style.backgroundColor = 'white';
 });
 
 var slider = document.getElementById("slider");
