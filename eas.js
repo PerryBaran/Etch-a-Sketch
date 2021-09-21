@@ -21,7 +21,8 @@ function createGrid(size){
 
 
 grid.addEventListener("mouseover", function(event) {
-event.target.style.backgroundColor = 'black';
+var color = document.getElementById("color").value;
+event.target.style.backgroundColor = color;
 grid.style.backgroundColor = 'white';
 });
 
