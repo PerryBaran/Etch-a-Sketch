@@ -8,6 +8,6 @@
 
 .cell {
     justify-self: stretch;
-    border: 2px solid grey;
-    background-color: blue;
+    border: 1px solid rgba(128, 128, 128, 0.205);
+    background-color: white;
 }

@@ -7,8 +7,13 @@ function createGrid(size){
         grid.appendChild(cell);
     }
 
-    var scale = 500/(Math.sqrt(size));
-    grid.style.gridTemplateColumns = "repeat(" + Math.sqrt(size) + ", " + scale + "px)";
-    grid.style.gridTemplateRows = "repeat(auto-fill, " + scale + "px)";
+    grid.style.gridTemplateColumns = "repeat(" + Math.sqrt(size) + ", " + 500/(Math.sqrt(size)) + "px)";
+    grid.style.gridTemplateRows = "repeat(auto-fill, " + 500/(Math.sqrt(size)) + "px)";
 }
-createGrid(100);
+
+
+grid.addEventListener("mouseover", function(event) {
+event.target.style.backgroundColor = "black";
+});
+
+createGrid(16*16);
