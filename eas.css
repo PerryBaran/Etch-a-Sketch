@@ -3,7 +3,7 @@
    display: grid;
    height: 500px;
    width: 500px;
-   background-color: rgb(255, 255, 255);
+   background-color: white;
 }
 
 .cell {

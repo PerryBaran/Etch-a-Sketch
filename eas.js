@@ -19,6 +19,17 @@ function createGrid(size){
     grid.style.gridTemplateRows = 'repeat(auto-fill, ' + 500/size + 'px)';
 }
 
+grid.addEventListener("mouseover", function(event) {
+const transparency = document.getElementById("transparency");
+    if (transparency.checked) {
+        var cellOpacity = event.target.style.opacity;
+        var opacity = Number(cellOpacity) + 0.1;  
+    }
+    else {
+        var opacity = 1;
+    }
+event.target.style.opacity = opacity;
+});
 
 grid.addEventListener("mouseover", function(event) {
 const rainbow = document.getElementById("rainbow");
@@ -30,8 +41,6 @@ const rainbow = document.getElementById("rainbow");
     }
 event.target.style.backgroundColor = color;
 grid.style.backgroundColor = 'white';
-
-console.log(color)
 });
 
 var slider = document.getElementById("slider");
