@@ -21,9 +21,17 @@ function createGrid(size){
 
 
 grid.addEventListener("mouseover", function(event) {
-var color = document.getElementById("color").value;
+const rainbow = document.getElementById("rainbow");
+    if (rainbow.checked) {
+        var color = 'rgba(' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ')'
+    }
+    else {
+        var color = document.getElementById("color").value;  
+    }
 event.target.style.backgroundColor = color;
 grid.style.backgroundColor = 'white';
+
+console.log(color)
 });
 
 var slider = document.getElementById("slider");
