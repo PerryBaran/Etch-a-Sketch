@@ -20,6 +20,16 @@ function createGrid(size){
 }
 
 grid.addEventListener("mouseover", function(event) {
+const rainbow = document.getElementById("rainbow");
+    if (rainbow.checked) {
+        var color = 'rgba(' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ')'
+    }
+    else {
+        var color = document.getElementById("color").value;  
+    }
+event.target.style.backgroundColor = color;
+grid.style.backgroundColor = 'white';
+
 const transparency = document.getElementById("transparency");
     if (transparency.checked) {
         var cellOpacity = event.target.style.opacity;
@@ -31,33 +41,18 @@ const transparency = document.getElementById("transparency");
 event.target.style.opacity = opacity;
 });
 
-grid.addEventListener("mouseover", function(event) {
-const rainbow = document.getElementById("rainbow");
-    if (rainbow.checked) {
-        var color = 'rgba(' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ')'
-    }
-    else {
-        var color = document.getElementById("color").value;  
-    }
-event.target.style.backgroundColor = color;
-grid.style.backgroundColor = 'white';
-});
-
 var slider = document.getElementById("slider");
 var output = document.getElementById("output");
 output.innerHTML = '16 x 16';
-
 slider.oninput = function() {
     output.innerHTML = this.value + " x " + this.value;
 }
-
 slider.addEventListener("click", function(){
     var sliderValue = slider.value;
     createGrid(sliderValue);
 });
 
 var clear = document.getElementById("clear");
-
 clear.addEventListener("click", function(){
     var sliderValue = slider.value;
     createGrid(sliderValue);
