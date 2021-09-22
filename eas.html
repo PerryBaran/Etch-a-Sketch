@@ -7,29 +7,33 @@
         <script yupe="text/javascript" src="eas.js" defer></script>
     </head>
     <body>
+        <h1>Etch-a-Sketch</h1>
         <div id="container"></div>            
         <div class="optionsmenu">
-            <div class="gridoptions sizingcontainer">
-                <input type="range" min="2" max="100" value="16" id="slider">
-                <output id="output"></output>
-            </div>
-            <div class="gridoptions resetcontainer">
-                <button id="clear">clear</button>
-            </div>
-            <div class="gridoptions colorpicker">
-                <div>colour picker</div>
-                <input type="color" id="color">
-            </div>
-            <div class="gridoptions special">
-                <div>
-                    <div>rainbow</div>
-                    <input type="checkbox" id="rainbow">
+            <div class="optionscontainer">
+                <div class="sizingcontainer">
+                    <input type="range" min="2" max="100" value="16" id="slider">
+                    <output id="output"></output>
                 </div>
-                <div>
-                    <div>transparency</div>
-                    <input type="checkbox" id="transparency">
+                <div class="clearcontainer">
+                    <button id="clear">clear</button>
                 </div>
-
+            </div>
+            <div class="optionscontainer">
+                <div class="colorpicker">
+                    <div>colour picker</div>
+                    <input type="color" id="color">
+                </div>
+                <div class="specialcontainer">
+                    <div class="rainbow">
+                        <div>rainbow</div>
+                        <input type="checkbox" id="rainbow">
+                    </div>
+                    <div class="transparency">
+                        <div>transparency</div>
+                        <input type="checkbox" id="transparency">
+                    </div>
+                </div>
             </div>
         </div>
     </body>

@@ -6,6 +6,7 @@ function reset(parent){
     }
 }
 
+
 function createGrid(size){
     reset(grid);
 
@@ -18,6 +19,7 @@ function createGrid(size){
     grid.style.gridTemplateColumns = 'repeat(' + size + ', ' + 500/size + 'px)';
     grid.style.gridTemplateRows = 'repeat(auto-fill, ' + 500/size + 'px)';
 }
+
 
 grid.addEventListener("mouseover", function(event) {
 const rainbow = document.getElementById("rainbow");
@@ -41,6 +43,7 @@ const transparency = document.getElementById("transparency");
 event.target.style.opacity = opacity;
 });
 
+
 var slider = document.getElementById("slider");
 var output = document.getElementById("output");
 output.innerHTML = '16 x 16';
@@ -57,5 +60,6 @@ clear.addEventListener("click", function(){
     var sliderValue = slider.value;
     createGrid(sliderValue);
 });
+
 
 createGrid(16);
