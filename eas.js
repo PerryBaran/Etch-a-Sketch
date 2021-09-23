@@ -16,8 +16,8 @@ function createGrid(size){
         grid.appendChild(cell);
     }
 
-    grid.style.gridTemplateColumns = 'repeat(' + size + ', ' + 500/size + 'px)';
-    grid.style.gridTemplateRows = 'repeat(auto-fill, ' + 500/size + 'px)';
+    grid.style.gridTemplateColumns = 'repeat(' + size + ', ' + 100/size + '%)';
+    grid.style.gridTemplateRows = 'repeat(auto-fill, ' + 100/size + '%)';
 }
 
 
@@ -27,7 +27,7 @@ const rainbow = document.getElementById("rainbow");
         var color = 'rgba(' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ', ' + Math.floor(Math.random()*250) + ')'
     }
     else {
-        var color = document.getElementById("color").value;  
+        var color = document.getElementById("color").value; 
     }
 event.target.style.backgroundColor = color;
 grid.style.backgroundColor = 'white';
