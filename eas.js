@@ -30,7 +30,7 @@ const rainbow = document.getElementById("rainbow");
         var color = document.getElementById("color").value; 
     }
 event.target.style.backgroundColor = color;
-grid.style.backgroundColor = 'white';
+grid.style.backgroundColor = '';
 
 const transparency = document.getElementById("transparency");
     if (transparency.checked) {
