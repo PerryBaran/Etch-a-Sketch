@@ -10,7 +10,6 @@ h1 {
     font-size: 40px;
 }
 
-
 .head{
     text-align: center;
     height: 75px;
@@ -47,6 +46,7 @@ a:visited {
     box-shadow: 0px 0px 0 10px rgb(25, 47, 65);
     opacity: 1;
     cursor: pointer;
+    transition: 0s;
 }
 
 .cell {

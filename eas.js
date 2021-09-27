@@ -12,7 +12,7 @@ function createGrid(size){
 
     for (i = 0; i < (size*size); i++) {
         let cell = document.createElement("div");
-        cell.className='cell';
+        cell.className = 'cell';
         grid.appendChild(cell);
     }
 
