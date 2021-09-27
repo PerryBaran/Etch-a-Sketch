@@ -31,11 +31,13 @@ const rainbow = document.getElementById("rainbow");
     }
 event.target.style.backgroundColor = color;
 grid.style.backgroundColor = '';
+grid.style.opacity = 1;
 
 const transparency = document.getElementById("transparency");
     if (transparency.checked) {
         var cellOpacity = event.target.style.opacity;
         var opacity = Number(cellOpacity) + 0.1;  
+        
     }
     else {
         var opacity = 1;
